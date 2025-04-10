@@ -60,14 +60,38 @@
       font-size: 1em;
       cursor: pointer;
     }
-    /* Espaço para a imagem em cada painel */
+    /* BOTÃO DISCORD - CENTRALIZADO */
+    .discord-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 15px auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7289da;
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+  cursor: pointer;
+  gap: 8px;
+}
+.discord-btn img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+    .discord-btn span {
+      vertical-align: middle;
+    }
     .panel img {
       width: 100%;
       margin-top: 10px;
       border-radius: 10px;
       display: block;
     }
-    /* Exibição da cotação no canto */
     #cotacao {
       position: fixed;
       bottom: 5px;
@@ -79,16 +103,13 @@
   </style>
 </head>
 <body>
-  <!-- Exibição da cotação para os itens dinâmicos -->
   <div id="cotacao">Carregando cotação...</div>
 
-  <!-- Painel 1: Night Crows -->
+  <!-- Painel 1 -->
   <div class="panel" id="panelNightCrows">
     <h2>Night Crows</h2>
     <ul>
-      <!-- Itens fixos: Diamantes -->
       <li>💎Diamantes = $ <span class="fixed">5.20</span> | R$ <span class="fixed">30.00</span></li>
-      <!-- Itens com valor dinâmico (R$ = USDT * cotação) -->
       <li>Pack 5$ = $ <span class="static">4.10</span> | R$ <span class="convert" data-usdt="4.10">--</span></li>
       <li>Pack 8$ = $ <span class="static">6.56</span> | R$ <span class="convert" data-usdt="6.56">--</span></li>
       <li>Pack 10$ = $ <span class="static">8.20</span> | R$ <span class="convert" data-usdt="8.20">--</span></li>
@@ -98,11 +119,13 @@
       <li>Pack 100$ = $ <span class="static">82.00</span> | R$ <span class="convert" data-usdt="82.00">--</span></li>
     </ul>
     <button onclick="copyPanel('panelNightCrows')">Copiar preços</button>
-    <!-- Espaço para imagem (substitua o src abaixo) -->
     <img src="https://lh3.googleusercontent.com/d/1SCBo-Midzz2D6vcn5gs09-UPYVA319Co" alt="Imagem Night Crows">
+    <a href="https://discord.com/channels/1184339622696853626/1258989068239503380" target="_blank" class="discord-btn">
+      <img src="https://lh3.googleusercontent.com/d/1ppwhjBwFu8WTKdFeJBzAPL5fg9zPxfpB" alt="Ícone Discord"><span>Comprar</span>
+    </a>
   </div>
 
-  <!-- Painel 2: Night Crows TWD -->
+  <!-- Painel 2 -->
   <div class="panel" id="panelNightCrowsTWD">
     <h2>Night Crows TWD</h2>
     <ul>
@@ -118,11 +141,13 @@
       <li>Pack 30.000 TWD = $ <span class="static">822.00</span> | R$ <span class="convert" data-usdt="822.00">--</span></li>
     </ul>
     <button onclick="copyPanel('panelNightCrowsTWD')">Copiar preços</button>
-    <!-- Espaço para imagem (substitua o src abaixo) -->
     <img src="https://lh3.googleusercontent.com/d/1GRiix7L28noZLZN8n92kEjJCEnffr4vc" alt="Imagem Night Crows TWD">
+    <a href="https://discord.com/channels/1184339622696853626/1258989068239503380" target="_blank" class="discord-btn">
+      <img src="https://lh3.googleusercontent.com/d/1ppwhjBwFu8WTKdFeJBzAPL5fg9zPxfpB" alt="Ícone Discord"><span>Comprar</span>
+    </a>
   </div>
 
-  <!-- Painel 3: Mir4 WebShop -->
+  <!-- Painel 3 -->
   <div class="panel" id="panelMir4Webshop">
     <h2>Mir4 WebShop</h2>
     <ul>
@@ -131,18 +156,18 @@
       <li>Pack 100$ = $ <span class="static">107.00</span> | R$ <span class="convert" data-usdt="107.00">--</span></li>
     </ul>
     <button onclick="copyPanel('panelMir4Webshop')">Copiar preços</button>
-    <!-- Espaço para imagem (substitua o src abaixo) -->
     <img src="https://lh3.googleusercontent.com/d/12JUkRdgB7zGf6HsurBr7BipKsbKNary4" alt="Imagem Mir4 WebShop">
+    <a href="https://discord.com/channels/1184339622696853626/1251022941143957545" target="_blank" class="discord-btn">
+      <img src="https://lh3.googleusercontent.com/d/1ppwhjBwFu8WTKdFeJBzAPL5fg9zPxfpB" alt="Ícone Discord"><span>Comprar</span>
+    </a>
   </div>
 
-  <!-- Painel 4: Mir4 -->
+  <!-- Painel 4 -->
   <div class="panel" id="panelMir4">
     <h2>Mir4</h2>
     <ul>
-      <!-- Itens fixos: Gold (valores fixos) -->
       <li>☀️Gold 1k - 9k = $ <span class="fixed">4.80</span> | R$ <span class="fixed">29.00</span></li>
       <li>☀️Gold 10k+ = $ <span class="fixed">4.80</span> | R$ <span class="fixed">28.00</span></li>
-      <!-- Itens com conversão dinâmica -->
       <li>Pack 1$ = $ <span class="static">0.99</span> | R$ <span class="convert" data-usdt="0.99">--</span></li>
       <li>Pack 3$ = $ <span class="static">2.55</span> | R$ <span class="convert" data-usdt="2.55">--</span></li>
       <li>Pack 5$ = $ <span class="static">4.25</span> | R$ <span class="convert" data-usdt="4.25">--</span></li>
@@ -152,21 +177,21 @@
       <li>Pack 100$ = $ <span class="static">74.00</span> | R$ <span class="convert" data-usdt="74.00">--</span></li>
     </ul>
     <button onclick="copyPanel('panelMir4')">Copiar preços</button>
-    <!-- Espaço para imagem (substitua o src abaixo) -->
     <img src="https://lh3.googleusercontent.com/d/17TAluRM37QgDqjIw_lXxQliQoBWou1Jc" alt="Imagem Mir4">
+    <a href="https://discord.com/channels/1184339622696853626/1251022941143957545" target="_blank" class="discord-btn">
+      <img src="https://lh3.googleusercontent.com/d/1ppwhjBwFu8WTKdFeJBzAPL5fg9zPxfpB" alt="Ícone Discord"><span>Comprar</span>
+    </a>
   </div>
 
   <script>
-    // Atualiza os valores em R$ para os itens dinâmicos
     async function atualizarCotacao() {
       try {
         const response = await fetch('https://api.binance.com/api/v3/ticker/price?symbol=USDTBRL');
-        if(!response.ok) throw new Error("Erro na requisição");
+        if (!response.ok) throw new Error("Erro na requisição");
         const data = await response.json();
         const taxa = parseFloat(data.price);
         document.getElementById('cotacao').innerText = `Taxa atual USD-BRL: R$ ${taxa.toFixed(4)}`;
         
-        // Para cada elemento com a classe "convert", atualiza o valor em R$ com base no atributo data-usdt
         const elems = document.querySelectorAll('.convert');
         elems.forEach(el => {
           const usdt = parseFloat(el.getAttribute('data-usdt'));
@@ -175,13 +200,12 @@
             el.innerText = brl.toFixed(2);
           }
         });
-      } catch(error) {
+      } catch (error) {
         console.error('Erro ao atualizar cotação:', error);
         document.getElementById('cotacao').innerText = 'Erro ao carregar cotação';
       }
     }
     
-    // Função para copiar o conteúdo do painel para a área de transferência
     function copyPanel(panelId) {
       const panel = document.getElementById(panelId);
       let text = panel.querySelector('h2').innerText + "\n";
